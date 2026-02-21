@@ -16,9 +16,41 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata = {
-  title: "Escape Gnóstico",
-  description: "O Conhecimento Proibido das Sete Esferas"
-}
+  title: "Demiurgo Solar-Serpentino | Escape Gnóstico",
+  description:
+    "Explore a cosmologia do Demiurgo Solar-Serpentino, os sete arcontes planetários e o caminho além de Saturno rumo ao Pleroma.",
+  keywords: [
+    "gnosticismo",
+    "demiurgo",
+    "arcontes",
+    "saturno oculto",
+    "sete esferas planetárias",
+    "escape da reencarnação",
+    "pleroma",
+	"demiurgo significado",
+	"o que é gnosticismo",
+	"arcontes gnósticos",
+	"saturno ocultismo",
+	"sete esferas planetárias",
+	"escape da reencarnação",
+	"pleroma significado"
+	"cosmologia gnóstica explicação",
+	"demiurgo solar serpente",
+	"culto a saturno esoterismo"
+	"como atravessar as sete esferas"
+	"ogdóade significado gnóstico"
+
+  ],
+  openGraph: {
+    title: "O Demiurgo Solar-Serpentino",
+    description:
+      "Descubra os sete arcontes e o caminho gnóstico de libertação.",
+    url: "https://escapegnostico.blendibox.com.br/",
+    siteName: "Escape Gnóstico",
+    locale: "pt_BR",
+    type: "website",
+  },
+};
 
 export default function RootLayout({
   children,
