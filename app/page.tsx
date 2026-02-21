@@ -19,17 +19,23 @@ export default function Home() {
     }
 
     // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault()
-        const target = document.querySelector(
-          (this as HTMLAnchorElement).getAttribute("href")!
-        )
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth", block: "start" })
-        }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    const href = anchor.getAttribute("href")
+    if (!href) return
+
+    const target = document.querySelector(href)
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
       })
-    })
+    }
+  })
+})
 
     // Intersection Observer animations
     const observerOptions = {
@@ -150,8 +156,188 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEÇÕES RESTANTES — IDÊNTICAS */}
-      {/* (Mantidas completas como no HTML original, apenas convertidas para JSX) */}
+    {/* THE SEVEN SPHERES */}
+<section className="section">
+  <h2 className="section-title">Atravesse as Sete Esferas</h2>
+
+  <p
+    style={{
+      textAlign: "center",
+      fontSize: "1.3rem",
+      marginBottom: "2rem",
+      maxWidth: "800px",
+      marginLeft: "auto",
+      marginRight: "auto"
+    }}
+  >
+    Cada esfera planetária é uma camada de ilusão progressivamente mais sutil.
+    Aprenda a reconhecer e superar cada arconte guardião.
+  </p>
+
+  <div className="spheres-container">
+    {[
+      "☽\nLUA\nSelene",
+      "☿\nMERCÚRIO\nNaas",
+      "♀\nVÊNUS\nAstarte",
+      "☉\nSOL\nDemiurgo",
+      "♂\nMARTE\nSamael",
+      "♃\nJÚPITER\nSabaoth",
+      "♄\nSATURNO\nIaldabaoth"
+    ].map((sphere, i) => (
+      <div
+        key={i}
+        className="sphere"
+        style={{ animationDelay: `${i * 0.5}s`, whiteSpace: "pre-line" }}
+      >
+        {sphere}
+      </div>
+    ))}
+  </div>
+</section>
+
+<section
+  className="section"
+  style={{
+    background:
+      "linear-gradient(135deg, rgba(74, 26, 94, 0.3), rgba(45, 74, 123, 0.2))",
+    padding: "5rem 2rem"
+  }}
+>
+  <h2 className="section-title">
+    Por Que Esse Conhecimento Foi Ocultado
+  </h2>
+
+  <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+    <p
+      style={{
+        fontSize: "1.3rem",
+        lineHeight: 2,
+        textAlign: "center",
+        marginBottom: "2rem"
+      }}
+    >
+      Durante séculos, as religiões institucionais trabalharam para destruir os textos gnósticos.
+      Por quê? Porque eles revelam a verdade sobre a prisão cósmica e o caminho de escape.
+    </p>
+
+    <div className="testimonial">
+      A Igreja primitiva declarou os gnósticos como hereges supremos e queimou suas bibliotecas.
+      Os textos de Nag Hammadi só sobreviveram porque foram enterrados no deserto egípcio em 367 d.C.
+      <div className="testimonial-author">
+        — Elaine Pagels, historiadora de religiões
+      </div>
+    </div>
+
+    <p
+      style={{
+        fontSize: "1.2rem",
+        lineHeight: 2,
+        textAlign: "center",
+        marginTop: "3rem"
+      }}
+    >
+      Esse conhecimento ameaça os sistemas de controle porque ensina que você não precisa de intermediários,
+      sacerdotes ou salvadores externos.{" "}
+      <strong style={{ color: "var(--ethereal-gold)" }}>
+        A gnose está dentro de você.
+      </strong>
+    </p>
+  </div>
+</section>
+
+<section className="section">
+  <h2 className="section-title">Para Quem É Este Livro</h2>
+
+  <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+    <div className="mystery-card" style={{ margin: "2rem 0" }}>
+      <h3 style={{ marginBottom: "1.5rem" }}>
+        Este livro é para você se:
+      </h3>
+
+      <ul
+        style={{
+          fontSize: "1.2rem",
+          lineHeight: 2,
+          listStyle: "none",
+          padding: 0
+        }}
+      >
+        <li>✦ Sempre sentiu que algo está fundamentalmente errado com a realidade</li>
+        <li>✦ Questiona as narrativas religiosas tradicionais</li>
+        <li>✦ Estuda ocultismo, esoterismo ou gnosticismo</li>
+        <li>✦ Quer entender Sol e Saturno em simbologias ocultas</li>
+        <li>✦ Busca preparação consciente para a transição post-mortem</li>
+        <li>✦ Reconhece padrões arcontícos nas estruturas de poder</li>
+        <li>✦ Está pronto para conhecimentos que não podem ser "desconhecidos"</li>
+      </ul>
+    </div>
+
+    <div
+      className="mystery-card"
+      style={{
+        margin: "2rem 0",
+        background: "rgba(139, 0, 0, 0.2)",
+        borderColor: "rgba(255, 69, 0, 0.5)"
+      }}
+    >
+      <h3 style={{ color: "#ff6347", marginBottom: "1rem" }}>
+        ⚠️ Aviso Importante
+      </h3>
+
+      <p style={{ fontSize: "1.1rem" }}>
+        Este não é um livro de autoajuda espiritual.
+        É um mapa técnico baseado em textos gnósticos ancestrais.
+        Se busca conforto, este não é seu caminho.
+        Se busca verdade, bem-vindo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section
+  className="section"
+  style={{ background: "rgba(74, 26, 94, 0.2)" }}
+>
+  <h2 className="section-title">O Que Dizem Os Leitores</h2>
+
+  <div className="testimonial">
+    Finalmente um texto que conecta todos os pontos.
+    <div className="testimonial-author">
+      — Marcus V., estudioso de hermetismo
+    </div>
+  </div>
+
+  <div className="testimonial">
+    Depois de 15 anos estudando gnosticismo, este é o mapeamento mais completo.
+    <div className="testimonial-author">
+      — Ana L., pesquisadora de religiões comparadas
+    </div>
+  </div>
+
+  <div className="testimonial">
+    Comprei por curiosidade sobre Saturno nas elites.
+    <div className="testimonial-author">
+      — Rafael S., investigador de simbologias ocultas
+    </div>
+  </div>
+</section>
+
+<section className="section">
+  <h2 className="section-title">Perguntas Frequentes</h2>
+
+  {[
+    ["📖 Em qual formato é o livro?", "E-book em PDF de alta qualidade com 80+ páginas."],
+    ["🔐 É seguro comprar?", "Sim! Utilizamos plataformas com certificação internacional."],
+    ["⏰ Quanto tempo tenho acesso?", "Acesso vitalício."],
+    ["🎓 Preciso de conhecimento prévio?", "Não necessariamente, mas ajuda."],
+    ["🌍 Funciona em qualquer país?", "Sim! Produto digital acessível globalmente."]
+  ].map((faq, i) => (
+    <div key={i} className="faq-item">
+      <div className="faq-question">{faq[0]}</div>
+      <div className="faq-answer">{faq[1]}</div>
+    </div>
+  ))}
+</section>
 
       {/* PRICE */}
       <section className="price-section" id="comprar">
