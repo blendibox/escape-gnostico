@@ -33,7 +33,7 @@ export const metadata = {
 	"saturno ocultismo",
 	"sete esferas planetárias",
 	"escape da reencarnação",
-	"pleroma significado"
+	"pleroma significado",
 	"cosmologia gnóstica explicação",
 	"demiurgo solar serpente",
 	"culto a saturno esoterismo"
