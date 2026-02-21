@@ -351,7 +351,7 @@ export default function Home() {
           </div>
 
           <a href="https://pay.hotmart.com/A104565880R" className="cta-primary">
-            Garantir Minha Cópia Agora
+            Garantir Minha Cópia Agora!
           </a>
 
           <div className="guarantee">
