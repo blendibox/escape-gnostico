@@ -350,7 +350,7 @@ export default function Home() {
             R$ 47,00
           </div>
 
-          <a href="https://hotmart.com/pt-br/marketplace/produtos/escape-gnostico-o-conhecimento-proibido-das-sete-esferas-planetarias/A104565880R" className="cta-primary">
+          <a href="https://pay.hotmart.com/A104565880R" className="cta-primary">
             Garantir Minha Cópia Agora
           </a>
 
