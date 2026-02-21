@@ -3,29 +3,7 @@
 import { useEffect } from "react"
 
 
-export const metadata = {
-  title: "Demiurgo Solar-Serpentino | Escape Gnóstico",
-  description:
-    "Explore a cosmologia do Demiurgo Solar-Serpentino, os sete arcontes planetários e o caminho além de Saturno rumo ao Pleroma.",
-  keywords: [
-    "gnosticismo",
-    "demiurgo",
-    "arcontes",
-    "saturno oculto",
-    "sete esferas planetárias",
-    "escape da reencarnação",
-    "pleroma"
-  ],
-  openGraph: {
-    title: "O Demiurgo Solar-Serpentino",
-    description:
-      "Descubra os sete arcontes e o caminho gnóstico de libertação.",
-    url: "https://escapegnostico.blendibox.com.br/",
-    siteName: "Escape Gnóstico",
-    locale: "pt_BR",
-    type: "website",
-  },
-};
+
 
 
 export default function Home() {
