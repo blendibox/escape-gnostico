@@ -1,0 +1,471 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --void-black: #0a0a0f;
+            --cosmic-purple: #4a1a5e;
+            --mystic-violet: #7b2d8f;
+            --astral-blue: #2d4a7b;
+            --ethereal-gold: #d4af37;
+            --divine-white: #f5f0e8;
+            --shadow-deep: rgba(10, 10, 15, 0.9);
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--void-black);
+            color: var(--divine-white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated Galaxy Background */
+        .galaxy-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(123, 45, 143, 0.3) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(74, 26, 94, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(45, 74, 123, 0.2) 0%, transparent 70%),
+                linear-gradient(180deg, #0a0a0f 0%, #1a0a2e 50%, #0a0a0f 100%);
+            animation: galaxyPulse 20s ease-in-out infinite;
+        }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes galaxyPulse {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3)); }
+            50% { filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.8)); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .mystical-symbol {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 2rem;
+            animation: float 6s ease-in-out infinite, glow 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: linear-gradient(135deg, var(--ethereal-gold), var(--divine-white), var(--ethereal-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
+            animation: fadeInUp 1.5s ease-out 0.3s both;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-style: italic;
+            color: var(--mystic-violet);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(123, 45, 143, 0.5);
+            animation: fadeInUp 1.5s ease-out 0.6s both;
+        }
+
+        .hero-description {
+            max-width: 700px;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            animation: fadeInUp 1.5s ease-out 0.9s both;
+        }
+
+        /* CTA Buttons */
+        .cta-primary {
+            display: inline-block;
+            padding: 1.5rem 4rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            background: linear-gradient(135deg, var(--ethereal-gold), #b8930f);
+            color: var(--void-black);
+            text-decoration: none;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+            animation: fadeInUp 1.5s ease-out 1.2s both;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 60px rgba(212, 175, 55, 0.7);
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--ethereal-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Grid of Mysteries */
+        .mysteries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .mystery-card {
+            background: linear-gradient(135deg, rgba(74, 26, 94, 0.3), rgba(45, 74, 123, 0.2));
+            padding: 2.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .mystery-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(212, 175, 55, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .mystery-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--ethereal-gold);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+        }
+
+        .mystery-card:hover::before {
+            opacity: 1;
+        }
+
+        .mystery-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .mystery-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--ethereal-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .mystery-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Planetary Spheres Visualization */
+        .spheres-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem 0;
+        }
+
+        .sphere {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+            border: 2px solid var(--ethereal-gold);
+            background: radial-gradient(circle at 30% 30%, rgba(212, 175, 55, 0.3), rgba(74, 26, 94, 0.5));
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+            transition: all 0.4s ease;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .sphere:nth-child(2) { animation-delay: 0.5s; }
+        .sphere:nth-child(3) { animation-delay: 1s; }
+        .sphere:nth-child(4) { animation-delay: 1.5s; }
+        .sphere:nth-child(5) { animation-delay: 2s; }
+        .sphere:nth-child(6) { animation-delay: 2.5s; }
+        .sphere:nth-child(7) { animation-delay: 3s; }
+
+        .sphere:hover {
+            transform: scale(1.2) translateY(-20px);
+            box-shadow: 0 0 60px rgba(212, 175, 55, 0.8);
+        }
+
+        /* Testimonials */
+        .testimonial {
+            background: linear-gradient(135deg, rgba(74, 26, 94, 0.4), rgba(45, 74, 123, 0.3));
+            padding: 3rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--ethereal-gold);
+            font-style: italic;
+            font-size: 1.2rem;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 6rem;
+            color: var(--ethereal-gold);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-author {
+            text-align: right;
+            margin-top: 1.5rem;
+            font-style: normal;
+            color: var(--ethereal-gold);
+            font-weight: 600;
+        }
+
+        /* Price Section */
+        .price-section {
+            background: linear-gradient(135deg, rgba(74, 26, 94, 0.5), rgba(45, 74, 123, 0.4));
+            padding: 5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .price-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .price {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--ethereal-gold);
+            margin: 2rem 0;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .price-old {
+            font-size: 2rem;
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-right: 1rem;
+        }
+
+        .guarantee {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(10, 10, 15, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: 1.1rem;
+        }
+
+        .guarantee-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: rgba(74, 26, 94, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background: rgba(74, 26, 94, 0.3);
+            border-color: var(--ethereal-gold);
+        }
+
+        .faq-question {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--ethereal-gold);
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: radial-gradient(ellipse at center, rgba(123, 45, 143, 0.3), transparent);
+        }
+
+        .urgency-text {
+            font-size: 1.5rem;
+            color: var(--ethereal-gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1rem;
+            }
+
+            .sphere {
+                width: 90px;
+                height: 90px;
+                font-size: 0.7rem;
+            }
+
+            .mysteries-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        }
