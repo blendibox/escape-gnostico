@@ -36,8 +36,8 @@ export const metadata = {
 	"pleroma significado",
 	"cosmologia gnóstica explicação",
 	"demiurgo solar serpente",
-	"culto a saturno esoterismo"
-	"como atravessar as sete esferas"
+	"culto a saturno esoterismo",
+	"como atravessar as sete esferas",
 	"ogdóade significado gnóstico"
 
   ],
