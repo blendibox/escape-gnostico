@@ -2,6 +2,32 @@
 
 import { useEffect } from "react"
 
+
+export const metadata = {
+  title: "Demiurgo Solar-Serpentino | Escape Gnóstico",
+  description:
+    "Explore a cosmologia do Demiurgo Solar-Serpentino, os sete arcontes planetários e o caminho além de Saturno rumo ao Pleroma.",
+  keywords: [
+    "gnosticismo",
+    "demiurgo",
+    "arcontes",
+    "saturno oculto",
+    "sete esferas planetárias",
+    "escape da reencarnação",
+    "pleroma"
+  ],
+  openGraph: {
+    title: "O Demiurgo Solar-Serpentino",
+    description:
+      "Descubra os sete arcontes e o caminho gnóstico de libertação.",
+    url: "https://escapegnostico.blendibox.com.br/",
+    siteName: "Escape Gnóstico",
+    locale: "pt_BR",
+    type: "website",
+  },
+};
+
+
 export default function Home() {
   useEffect(() => {
     // Generate random stars
@@ -326,7 +352,7 @@ export default function Home() {
   <h2 className="section-title">Perguntas Frequentes</h2>
 
   {[
-    ["📖 Em qual formato é o livro?", "E-book em PDF de alta qualidade com 80+ páginas."],
+    ["📖 Em qual formato é o livro?", "E-book em PDF de alta qualidade com 21 páginas."],
     ["🔐 É seguro comprar?", "Sim! Utilizamos plataformas com certificação internacional."],
     ["⏰ Quanto tempo tenho acesso?", "Acesso vitalício."],
     ["🎓 Preciso de conhecimento prévio?", "Não necessariamente, mas ajuda."],
