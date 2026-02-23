@@ -2,7 +2,7 @@
 
 import { useEffect } from "react"
 
-
+import VideoAutoPlay from "./VideoAutoPlay";
 
 
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import VideoAutoPlay from "./VideoAutoPlay";
+
 
 export default function VideoAutoPlay() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
