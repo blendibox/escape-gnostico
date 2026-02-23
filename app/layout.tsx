@@ -47,6 +47,13 @@ export const metadata = {
       "Descubra os sete arcontes e o caminho gnóstico de libertação.",
     url: "https://escapegnostico.blendibox.com.br/",
     siteName: "Escape Gnóstico",
+	images: [
+      {
+        url: "https://escapegnostico.blendibox.com.br/demiurgo.jpeg",
+        width: 2496,
+        height: 1664,
+      },
+    ],
     locale: "pt_BR",
     type: "website",
   },

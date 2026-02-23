@@ -145,8 +145,8 @@ export default function Home() {
         <div className="mysteries-grid">
           {[
             ["🌙", "As Sete Esferas", "Mapeamento completo das armadilhas planetárias e como cada arconte mantém as almas prisioneiras em ciclos infinitos de reencarnação."],
-            ["🔮", "Palavras de Poder", "As senhas secretas e nomes sagrados que os gnósticos antigos usavam para passar pelos guardiões de cada esfera planetária."],
-            ["⚡", "Técnicas de Preparação", "Práticas diárias para desenvolver a consciência necessária para manter lucidez durante a passagem post-mortem."],
+            ["⚡", "Palavras de Poder", "As senhas secretas e nomes sagrados que os gnósticos antigos usavam para passar pelos guardiões de cada esfera planetária."],
+            ["🔮", "Técnicas de Preparação", "Práticas diárias para desenvolver a consciência necessária para manter lucidez durante a passagem post-mortem."],
             ["📜", "Textos Ancestrais", "Conexões profundas com Pistis Sophia, Apócrifo de João, Descida de Inanna e outros textos sagrados perdidos."],
             ["🗝️", "O Demiurgo Revelado", "Por que Sol e Saturno são adorados pelas elites ocultas e como essa adoração mantém o sistema de controle."],
             ["✨", "Além da Ogdóade", "O que existe além do oitavo céu, como alcançar o Pleroma verdadeiro e reunir-se com a Sophia restaurada."]
@@ -330,7 +330,7 @@ export default function Home() {
   <h2 className="section-title">Perguntas Frequentes</h2>
 
   {[
-    ["📖 Em qual formato é o livro?", "E-book em PDF de alta qualidade com 21 páginas."],
+    ["📖 Em qual formato é o livro?", "E-book em PDF de alta qualidade com 48 páginas."],
     ["🔐 É seguro comprar?", "Sim! Utilizamos plataformas com certificação internacional."],
     ["⏰ Quanto tempo tenho acesso?", "Acesso vitalício."],
     ["🎓 Preciso de conhecimento prévio?", "Não necessariamente, mas ajuda."],
