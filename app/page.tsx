@@ -202,7 +202,6 @@ export default function Home() {
     ))}
   </div>
 </section>
-
      <section>
         <VideoAutoPlay />
       </section>
