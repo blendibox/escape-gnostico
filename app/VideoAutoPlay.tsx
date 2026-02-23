@@ -1,0 +1,44 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import VideoAutoPlay from "./VideoAutoPlay";
+
+export default function VideoAutoPlay() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      },
+      {
+        threshold: 0.6, // começa quando 60% do vídeo estiver visível
+      }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <video
+      ref={videoRef}
+      src="/video/escape gnostico.mp4"
+      muted
+      playsInline
+      controls
+      style={{ width: "100%", borderRadius: "12px" }}
+    />
+  );
+}

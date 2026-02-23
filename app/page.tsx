@@ -203,6 +203,10 @@ export default function Home() {
   </div>
 </section>
 
+     <section>
+        <VideoAutoPlay />
+      </section>
+
 <section
   className="section"
   style={{
