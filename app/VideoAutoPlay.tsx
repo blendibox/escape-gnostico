@@ -4,32 +4,39 @@ import { useEffect, useRef } from "react";
 
 
 export default function VideoAutoPlay() {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const video = videoRef.current;
-
     if (!video) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!video) return;
+
         if (entry.isIntersecting) {
-          video.play();
+          if (video.paused) {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => {
+                // Ignora AbortError silenciosamente
+              });
+            }
+          }
         } else {
-          video.pause();
+          if (!video.paused) {
+            video.pause();
+          }
         }
       },
-      {
-        threshold: 0.6, // começa quando 60% do vídeo estiver visível
-      }
+      { threshold: 0.6 }
     );
 
     observer.observe(video);
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
+
 
   return (
     <video
@@ -38,6 +45,7 @@ export default function VideoAutoPlay() {
       muted
       playsInline
       controls
+	  preload="metadata"
       style={{ width: "100%", borderRadius: "12px" }}
     />
   );
