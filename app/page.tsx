@@ -205,7 +205,9 @@ export default function Home() {
  <section className="section">
 	<div
       className="mystery-card"
-
+        style={{
+			padding: "0";
+		}}
     >
         <VideoAutoPlay />
     </div>
