@@ -149,8 +149,12 @@ export default function Home() {
             ["🔮", "Técnicas de Preparação", "Práticas diárias para desenvolver a consciência necessária para manter lucidez durante a passagem post-mortem."],
             ["📜", "Textos Ancestrais", "Conexões profundas com Pistis Sophia, Apócrifo de João, Descida de Inanna e outros textos sagrados perdidos."],
             ["🗝️", "O Demiurgo Revelado", "Por que Sol e Saturno são adorados pelas elites ocultas e como essa adoração mantém o sistema de controle."],
-            ["✨", "Além da Ogdóade", "O que existe além do oitavo céu, como alcançar o Pleroma verdadeiro e reunir-se com a Sophia restaurada."]
-          ].map((item, i) => (
+            ["✨", "Além da Ogdóade", "O que existe além do oitavo céu, como alcançar o Pleroma verdadeiro e reunir-se com a Sophia restaurada."],
+            ["📖", "Exercícios específicos para CADA esfera", "Lua: Desapego emocional, Mercúrio: Silenciamento mental, Vênus: Completude interior, Sol: Dissolução de ego, Marte: Não-reação, Júpiter: Identificação de contratos, Saturno: Viver no agora eterno."],
+            ["📖", "IDENTIFICAÇÃO DE MANIPULAÇÃO ARCONTÍCA", "Marcadores específicos de manipulação, Antídotos práticos para cada tipo, Exemplos concretos do cotidiano"],
+            ["📖", "TÉCNICAS AVANÇADAS DE VISUALIZAÇÃO", "Visualização completa da jornada através das 7 esferas"],
+            ["🎓", "PERGUNTAS FREQUENTES AVANÇADAS", "Respostas profundas para dúvidas cruciais"]		  
+		  ].map((item, i) => (
             <div key={i} className="mystery-card">
               <span className="mystery-icon">{item[0]}</span>
               <h3>{item[1]}</h3>
