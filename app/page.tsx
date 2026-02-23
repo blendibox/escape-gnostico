@@ -205,11 +205,7 @@ export default function Home() {
  <section className="section">
 	<div
       className="mystery-card"
-      style={{
-        margin: "2rem 0",
-        background: "rgba(139, 0, 0, 0.2)",
-        borderColor: "rgba(255, 69, 0, 0.5)"
-      }}
+
     >
         <VideoAutoPlay />
     </div>
