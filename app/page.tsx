@@ -202,7 +202,7 @@ export default function Home() {
     ))}
   </div>
 </section>
- <section>
+ <section className="section">
 	<div
       className="mystery-card"
       style={{
