@@ -206,7 +206,7 @@ export default function Home() {
 	<div
       className="mystery-card"
         style={{
-			padding: "0";
+			padding: "0"
 		}}
     >
         <VideoAutoPlay />
